@@ -57,7 +57,7 @@ export default async function handler(req, res) {
                 accountBalance,
                 firstname,
                 lastname,
-                email,
+                email: email.toLowerCase().trim(),
                 password,
                 pin,
                 COT,

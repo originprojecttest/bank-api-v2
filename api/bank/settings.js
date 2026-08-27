@@ -195,7 +195,7 @@ export default async function handler(req, res) {
 
             const { error: emailDbUpdateErr } = await supabase
                 .from("users")
-                .update({ email: newEmail })
+                .update({ email: newEmail.toLowerCase().trim() })
                 .eq("id", userData.id);
 
             if (emailDbUpdateErr) throw new Error(emailDbUpdateErr.message);
