@@ -5,29 +5,29 @@ import cors from "cors";
 // ==========================================
 // 1. CORE FUNCTIONAL MODULE IMPORTS
 // ==========================================
-import checkHandler from "./api/bank/check.js";
-import dataHandler from "./api/bank/data.js";
-import forgotPasswordHandler from "./api/bank/forgot-password.js";
-import loginUserHandler from "./api/bank/login-user.js";
-import registerUserHandler from "./api/bank/register-user.js";
-import historyHandler from "./api/bank/history.js";
-import settingsHandler from "./api/bank/settings.js";
-import profileHandler from "./api/bank/profile.js";
-import localHandler from "./api/bank/local.js";
-import internationalHandler from "./api/bank/international.js";
-import avatarHandler from "./api/bank/avatar.js";
-import adminDataUpdateHandler from "./api/bank/admin-data-update.js";
+import checkHandler from "./address/check.js";
+import dataHandler from "./address/data.js";
+import forgotPasswordHandler from "./address/forgot-password.js";
+import loginUserHandler from "./address/login-user.js";
+import registerUserHandler from "./address/register-user.js";
+import historyHandler from "./address/history.js";
+import settingsHandler from "./address/settings.js";
+import profileHandler from "./address/profile.js";
+import localHandler from "./address/local.js";
+import internationalHandler from "./address/international.js";
+import avatarHandler from "./address/avatar.js";
+import adminDataUpdateHandler from "./address/admin-data-update.js";
 
 // Administrative Console Modules
-import adminAuthHandler from "./api/bank/admin-auth.js";
-import adminUsersHandler from "./api/bank/admin-users.js";
-import adminUpdateUserHandler from "./api/bank/admin-update-user.js";
-import adminHistoryHandler from "./api/bank/admin-history.js";
-import adminChatHandler from "./api/bank/admin-chat.js";
-import adminAiHistoryHandler from "./api/bank/admin-ai-history.js";
-import adminSettingsProfileHandler from "./api/bank/admin-settings-profile.js";
+import adminAuthHandler from "./address/admin-auth.js";
+import adminUsersHandler from "./address/admin-users.js";
+import adminUpdateUserHandler from "./address/admin-update-user.js";
+import adminHistoryHandler from "./address/admin-history.js";
+import adminChatHandler from "./address/admin-chat.js";
+import adminAiHistoryHandler from "./address/admin-ai-history.js";
+import adminSettingsProfileHandler from "./address/admin-settings-profile.js";
 
-import customerCareMailHandler from "./api/bank/mail.js";
+import customerCareMailHandler from "./address/mail.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
