@@ -27,8 +27,11 @@ import adminChatHandler from "./api/bank/admin-chat.js";
 import adminAiHistoryHandler from "./api/bank/admin-ai-history.js";
 import adminSettingsProfileHandler from "./api/bank/admin-settings-profile.js";
 
+import customerCareMailHandler from "./api/bank/mail.js";
+
 const app = express();
 const PORT = process.env.PORT || 5000;
+
 
 // ==========================================
 // 2. CENTRALIZED CORS ENGINE MANAGEMENT
@@ -123,6 +126,10 @@ app.all("/api/bank/admin-chat", adaptHandler(adminChatHandler));
 app.all("/api/bank/admin-ai-history", adaptHandler(adminAiHistoryHandler));
 app.all("/api/bank/admin-settings-profile", adaptHandler(adminSettingsProfileHandler));
 app.all("/api/bank/admin-data-update", adaptHandler(adminDataUpdateHandler));
+
+// Mail Dispatch Endpoints (supporting standard and ID-parameterized routes)
+app.post("/api/bank/mail", customerCareMailHandler);
+app.all("/api/bank/send-email/:id", customerCareMailHandler);
 
 // ==========================================
 // 6. HEALTH MONITORS & BOOTSTRAPPER
