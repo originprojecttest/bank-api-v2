@@ -118,7 +118,8 @@ app.all("/api/bank/profile", adaptHandler(profileHandler));
 app.all("/api/bank/avatar", adaptHandler(avatarHandler));
 
 // Administrative Console Matrix Actions
-app.all("/api/bank/admin-auth", adaptHandler(adminAuthHandler));
+// app.all("/api/bank/admin-auth", adaptHandler(adminAuthHandler));
+app.all("/api/bank/auth", adaptHandler(adminAuthHandler));
 app.all("/api/bank/admin-users", adaptHandler(adminUsersHandler));
 app.all("/api/bank/admin-update-user", adaptHandler(adminUpdateUserHandler));
 app.all("/api/bank/admin-history", adaptHandler(adminHistoryHandler));
